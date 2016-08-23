@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master">
+<body>
+
+    <metal:content-core fill-slot="content-core">
+        <metal:content-core define-macro="content-core">
+
+            <!-- Here we can add customizations to the main part of the
+                 content, keeping the rest of the stock plone features.
+
+                 You could also fill the main slot to override all the
+                 stock features.
+            -->
+            <p>Here is some custom text<p>
+
+            <!-- Here we access a custom field -->
+
+            <p tal:content="context/title">New field text here</p>
+            <p tal:content="context/description">New field text here</p>
+            <p tal:content="context/more_text">New field text here</p>
+            <p>all caps below?</p>
+            <p tal:content="context/all_caps">New field text here</p>
+            <p tal:content="context/display_text">New field text here</p>
+            <p tal:content="context/reverse">New field text here</p>
+
+        </metal:content-core>
+    </metal:content-core>
+
+</body>
+</html>

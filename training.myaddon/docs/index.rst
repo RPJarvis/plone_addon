@@ -1,0 +1,5 @@
+====================
+training.myaddon
+====================
+
+User documentation
